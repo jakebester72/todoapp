@@ -1,0 +1,13 @@
+<html>
+    <body>
+        <ul class="list-group t20">
+            {% for todolist in todo_items %}
+                {% if todolist.completed %}
+                <li class="list-group-item todo-completed">{{todolist.text}}</li>
+                {% else %}
+                <a href="#"><li class="list-group-item">{{todolist.text}}</li>
+                {% endif%}    
+            {% endfor %}
+        </ul>
+    </body>
+</html>
